@@ -25,4 +25,84 @@
         <tag>教程</tag>
       </tags>
   </entry>
+  <entry>
+    <title>如何在HexoBlog中插入图片</title>
+    <url>/2025/11/09/%E5%A6%82%E4%BD%95%E5%9C%A8HexoBlog%E4%B8%AD%E6%8F%92%E5%85%A5%E5%9B%BE%E7%89%87/</url>
+    <content><![CDATA[<style>
+table {
+  table-layout: fixed;
+  width: 100%;
+}
+td, th {
+  word-wrap: break-word;
+  white-space: normal;
+}
+</style>
+<p>🧩 Hexo 插入图片方法总览与对比</p>
+<table>
+<thead>
+<tr>
+<th>插入方式</th>
+<th>路径示例</th>
+<th>优点</th>
+<th>缺点</th>
+<th>推荐场景</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>文章资源文件夹</td>
+<td><code>!&#123;% asset_img photo.jpg 描述 %&#125;            </code></td>
+<td>自动关联文章、结构清晰、支持主题预览</td>
+<td>需启用 post_asset_folder，语法特殊</td>
+<td>每篇文章独立资源管理</td>
+</tr>
+<tr>
+<td>全局资源文件夹</td>
+<td><code>![描述](/images/photo.jpg)                 </code></td>
+<td>简单直观、支持 Markdown 语法</td>
+<td>所有图片混在一起，难以维护</td>
+<td>多篇文章共享图片资源</td>
+</tr>
+<tr>
+<td>网络图片链接</td>
+<td><code>![描述](https://img.url/photo.jpg)         </code></td>
+<td>快速插入、无需本地存储</td>
+<td>图片可能失效、加载慢、依赖外部服务</td>
+<td>引用图床或第三方图片</td>
+</tr>
+<tr>
+<td>相对路径语法</td>
+<td><code>![描述](photo.jpg)                         </code></td>
+<td>编辑器预览方便</td>
+<td>Hexo 不一定能正确解析，首页可能不显示</td>
+<td>Typora 本地写作预览</td>
+</tr>
+<tr>
+<td>插件方式</td>
+<td><code>![描述](photo.jpg) + 插件支持              </code></td>
+<td>自动处理路径、兼容 Markdown</td>
+<td>需安装插件、可能存在兼容性问题</td>
+<td>想用原生 Markdown 又要兼容 Hexo</td>
+</tr>
+</tbody></table>
+<hr>
+<p>🔧 推荐配置与操作步骤<br>✅ 启用 <code>post_asset_folder</code><br>在 <code>_config.yml</code> 中添加：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">post_asset_folder: <span class="literal">true</span></span><br><span class="line"></span><br><span class="line">执行：</span><br><span class="line">hexo new <span class="string">&quot;文章标题&quot;</span></span><br></pre></td></tr></table></figure>
+<p>生成结构：<br>source&#x2F;_posts&#x2F;<br>├── 文章标题.md<br>└── 文章标题&#x2F;<br>    └── photo.jpg<br>在 Markdown 中使用：</p>
+
+<hr>
+<p>📦 插件辅助（可选）<br>如果你想用原生 Markdown 语法插图但仍希望 Hexo正确解析，可以安装：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install hexo-asset-image --save</span><br></pre></td></tr></table></figure>
+<p>但需注意兼容性问题，部分 Hexo 版本已不推荐使用该插件 A。<br>建议<br>• 结构清晰、兼容性强：使用 <code>post_asset_folder</code> + <code>&#123;% asset_img %&#125;</code> 标签。<br>• 快速插图、无需配置：使用 <code>/images/</code> 全局资源文件夹 + Markdown 语法。<br>• 图床引用、跨平台：使用网络链接插图。<br>• 本地写作预览：使用相对路径 + Typora 编辑器。</p>
+<p>🧠 原理解析：为什么标签能显示，路径却不行<br>✅ 1. Hexo 的构建机制<br>• Hexo 并不会直接渲染 Markdown，而是将其转换为 HTML。<br>• 在转换过程中，Hexo 会识别 <code>&#123;% asset_img %&#125;</code> 标签，并自动将对应图片复制到 <code>public</code> 目录。<br>• 普通 Markdown 图片语法（如 <code>![图](photo.jpg)</code>）不会触发资源复制逻辑，除非你手动放置图片到 <code>source</code> 下的正确位置</p>
+<p><img src="/./1.jpeg"><br>![]<img src="/2025/11/09/%E5%A6%82%E4%BD%95%E5%9C%A8HexoBlog%E4%B8%AD%E6%8F%92%E5%85%A5%E5%9B%BE%E7%89%87/1.jpeg" class=""><br><img src="/2.jpeg"><br><img src="/imagines/2.jpeg"><br>tips:每次hexo new 的文档模板在scaffolds</p>
+]]></content>
+      <categories>
+        <category>知识</category>
+      </categories>
+      <tags>
+        <tag>Blog</tag>
+        <tag>插图</tag>
+      </tags>
+  </entry>
 </search>
