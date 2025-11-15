@@ -26,6 +26,32 @@
       </tags>
   </entry>
   <entry>
+    <title>配置nvim0.12</title>
+    <url>/2025/11/11/%E9%85%8D%E7%BD%AEnvim/</url>
+    <content><![CDATA[<p><u>Tips:下载好nvim 后建议新手输入“:Tutor”先熟悉操作</u></p>
+<hr>
+<h2 id="build系统变量"><a href="#build系统变量" class="headerlink" title="build系统变量"></a>build系统变量</h2><p>XDG_CONFIG_HOME<br>XDG_DATA_HOME<br>XDG_STATE_HOME <em>data文件总再次生成于c盘,checkhealth后发现改这个可以解决</em>::</p>
+<hr>
+<h2 id="Lazy-nvim下载"><a href="#Lazy-nvim下载" class="headerlink" title="Lazy.nvim下载"></a>Lazy.nvim下载</h2><h3 id="结构"><a href="#结构" class="headerlink" title="结构"></a>结构</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">~/.config/nvim</span><br><span class="line">├── lua</span><br><span class="line">│   ├── config</span><br><span class="line">│   │   └── lazy.lua</span><br><span class="line">│   └── plugins</span><br><span class="line">│       ├── spec1.lua</span><br><span class="line">│       ├── **</span><br><span class="line">│       └── spec2.lua</span><br><span class="line">└── init.lua</span><br></pre></td></tr></table></figure>
+<h3 id="init-lua"><a href="#init-lua" class="headerlink" title="init.lua"></a>init.lua</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">require(&quot;config.lazy&quot;)</span><br></pre></td></tr></table></figure>
+<h3 id="lazy-lua"><a href="#lazy-lua" class="headerlink" title="lazy.lua"></a>lazy.lua</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">-- Bootstrap lazy.nvim</span><br><span class="line">local lazypath = vim.fn.stdpath(&quot;data&quot;) .. &quot;/lazy/lazy.nvim&quot;</span><br><span class="line">if not (vim.uv or vim.loop).fs_stat(lazypath) then</span><br><span class="line">  local lazyrepo = &quot;https://github.com/folke/lazy.nvim.git&quot;</span><br><span class="line">  local out = vim.fn.system(&#123; &quot;git&quot;, &quot;clone&quot;, &quot;--filter=blob:none&quot;, &quot;--branch=stable&quot;, lazyrepo, lazypath &#125;)</span><br><span class="line">  if vim.v.shell_error ~= 0 then</span><br><span class="line">    vim.api.nvim_echo(&#123;</span><br><span class="line">      &#123; &quot;Failed to clone lazy.nvim:\n&quot;, &quot;ErrorMsg&quot; &#125;,</span><br><span class="line">      &#123; out, &quot;WarningMsg&quot; &#125;,</span><br><span class="line">      &#123; &quot;\nPress any key to exit...&quot; &#125;,</span><br><span class="line">    &#125;, true, &#123;&#125;)</span><br><span class="line">    vim.fn.getchar()</span><br><span class="line">    os.exit(1)</span><br><span class="line">  end</span><br><span class="line">end</span><br><span class="line">vim.opt.rtp:prepend(lazypath)</span><br><span class="line"></span><br><span class="line">-- Make sure to setup `mapleader` and `maplocalleader` before</span><br><span class="line">-- loading lazy.nvim so that mappings are correct.</span><br><span class="line">-- This is also a good place to setup other settings (vim.opt)</span><br><span class="line">vim.g.mapleader = &quot; &quot;</span><br><span class="line">vim.g.maplocalleader = &quot;\\&quot;</span><br><span class="line"></span><br><span class="line">-- Setup lazy.nvim</span><br><span class="line">require(&quot;lazy&quot;).setup(&#123;</span><br><span class="line">  spec = &#123;</span><br><span class="line">    -- import your plugins</span><br><span class="line">    &#123; import = &quot;plugins&quot; &#125;,</span><br><span class="line">  &#125;,</span><br><span class="line">  -- Configure any other settings here. See the documentation for more details.</span><br><span class="line">  -- colorscheme that will be used when installing plugins.</span><br><span class="line">  install = &#123; colorscheme = &#123; &quot;habamax&quot; &#125; &#125;,</span><br><span class="line">  -- automatically check for plugin updates</span><br><span class="line">  checker = &#123; enabled = true &#125;,</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<hr>
+<h2 id="Nerd-Font-JetBrainsMono为例"><a href="#Nerd-Font-JetBrainsMono为例" class="headerlink" title="Nerd Font(JetBrainsMono为例)"></a><a href="https://www.nerdfonts.com/font-downloads">Nerd Font(JetBrainsMono为例)</a></h2><h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><p>下载后解压 CTRL+A 全部安装                     </p>
+<h3 id="配置-Windows-Terminal-终端容器-为例"><a href="#配置-Windows-Terminal-终端容器-为例" class="headerlink" title="配置[Windows Terminal(终端容器)为例]"></a>配置[Windows Terminal(终端容器)为例]</h3><p>∨→设置→外观→JetBrainsMono Nerd Font<br><em>Windows Terminal 是一个现代终端容器，PowerShell 是它里面运行的一个命令行环境。你可以在 Windows Terminal 中运行 Neovim，并通过它设置字体、主题和图标支持。</em></p>
+<hr>
+<h2 id="插件推荐-更新ing"><a href="#插件推荐-更新ing" class="headerlink" title="插件推荐(更新ing)"></a>插件推荐(更新ing)</h2><h3 id="总表"><a href="#总表" class="headerlink" title="总表"></a>总表</h3><p>neotree.lua<br>lualine.lua<br>which-key.lua<br>treesitter.lua<br>tokyonight.lua<br>bufferline.lua<br>smear_cursor.lua</p>
+<h3 id="强调-treesitter"><a href="#强调-treesitter" class="headerlink" title="强调(treesitter)"></a>强调(treesitter)</h3><p>安装clang<br>环境变量PATH ..&#x2F;bin</p>
+<hr>
+<h2 id="Tip"><a href="#Tip" class="headerlink" title="Tip"></a>Tip</h2><p>Hexo项目的<code>source/</code>目录下创建一个名为<code>CNAME</code>的文件名(无扩展名)内容为域名如：blog.get.top</p>
+]]></content>
+      <categories>
+        <category>-知识</category>
+      </categories>
+      <tags>
+        <tag>-教程</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>如何在HexoBlog中插入图片</title>
     <url>/2025/11/09/%E5%A6%82%E4%BD%95%E5%9C%A8HexoBlog%E4%B8%AD%E6%8F%92%E5%85%A5%E5%9B%BE%E7%89%87/</url>
     <content><![CDATA[<style>
@@ -140,32 +166,6 @@ td, th {
       <tags>
         <tag>Blog</tag>
         <tag>插图</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>配置nvim0.12</title>
-    <url>/2025/11/11/%E9%85%8D%E7%BD%AEnvim/</url>
-    <content><![CDATA[<p><u>Tips:下载好nvim 后建议新手输入“:Tutor”先熟悉操作</u></p>
-<hr>
-<h2 id="build系统变量"><a href="#build系统变量" class="headerlink" title="build系统变量"></a>build系统变量</h2><p>XDG_CONFIG_HOME<br>XDG_DATA_HOME<br>XDG_STATE_HOME <em>data文件总再次生成于c盘,checkhealth后发现改这个可以解决</em>::</p>
-<hr>
-<h2 id="Lazy-nvim下载"><a href="#Lazy-nvim下载" class="headerlink" title="Lazy.nvim下载"></a>Lazy.nvim下载</h2><h3 id="结构"><a href="#结构" class="headerlink" title="结构"></a>结构</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">~/.config/nvim</span><br><span class="line">├── lua</span><br><span class="line">│   ├── config</span><br><span class="line">│   │   └── lazy.lua</span><br><span class="line">│   └── plugins</span><br><span class="line">│       ├── spec1.lua</span><br><span class="line">│       ├── **</span><br><span class="line">│       └── spec2.lua</span><br><span class="line">└── init.lua</span><br></pre></td></tr></table></figure>
-<h3 id="init-lua"><a href="#init-lua" class="headerlink" title="init.lua"></a>init.lua</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">require(&quot;config.lazy&quot;)</span><br></pre></td></tr></table></figure>
-<h3 id="lazy-lua"><a href="#lazy-lua" class="headerlink" title="lazy.lua"></a>lazy.lua</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">-- Bootstrap lazy.nvim</span><br><span class="line">local lazypath = vim.fn.stdpath(&quot;data&quot;) .. &quot;/lazy/lazy.nvim&quot;</span><br><span class="line">if not (vim.uv or vim.loop).fs_stat(lazypath) then</span><br><span class="line">  local lazyrepo = &quot;https://github.com/folke/lazy.nvim.git&quot;</span><br><span class="line">  local out = vim.fn.system(&#123; &quot;git&quot;, &quot;clone&quot;, &quot;--filter=blob:none&quot;, &quot;--branch=stable&quot;, lazyrepo, lazypath &#125;)</span><br><span class="line">  if vim.v.shell_error ~= 0 then</span><br><span class="line">    vim.api.nvim_echo(&#123;</span><br><span class="line">      &#123; &quot;Failed to clone lazy.nvim:\n&quot;, &quot;ErrorMsg&quot; &#125;,</span><br><span class="line">      &#123; out, &quot;WarningMsg&quot; &#125;,</span><br><span class="line">      &#123; &quot;\nPress any key to exit...&quot; &#125;,</span><br><span class="line">    &#125;, true, &#123;&#125;)</span><br><span class="line">    vim.fn.getchar()</span><br><span class="line">    os.exit(1)</span><br><span class="line">  end</span><br><span class="line">end</span><br><span class="line">vim.opt.rtp:prepend(lazypath)</span><br><span class="line"></span><br><span class="line">-- Make sure to setup `mapleader` and `maplocalleader` before</span><br><span class="line">-- loading lazy.nvim so that mappings are correct.</span><br><span class="line">-- This is also a good place to setup other settings (vim.opt)</span><br><span class="line">vim.g.mapleader = &quot; &quot;</span><br><span class="line">vim.g.maplocalleader = &quot;\\&quot;</span><br><span class="line"></span><br><span class="line">-- Setup lazy.nvim</span><br><span class="line">require(&quot;lazy&quot;).setup(&#123;</span><br><span class="line">  spec = &#123;</span><br><span class="line">    -- import your plugins</span><br><span class="line">    &#123; import = &quot;plugins&quot; &#125;,</span><br><span class="line">  &#125;,</span><br><span class="line">  -- Configure any other settings here. See the documentation for more details.</span><br><span class="line">  -- colorscheme that will be used when installing plugins.</span><br><span class="line">  install = &#123; colorscheme = &#123; &quot;habamax&quot; &#125; &#125;,</span><br><span class="line">  -- automatically check for plugin updates</span><br><span class="line">  checker = &#123; enabled = true &#125;,</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
-<hr>
-<h2 id="Nerd-Font-JetBrainsMono为例"><a href="#Nerd-Font-JetBrainsMono为例" class="headerlink" title="Nerd Font(JetBrainsMono为例)"></a><a href="https://www.nerdfonts.com/font-downloads">Nerd Font(JetBrainsMono为例)</a></h2><h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><p>下载后解压 CTRL+A 全部安装                     </p>
-<h3 id="配置-Windows-Terminal-终端容器-为例"><a href="#配置-Windows-Terminal-终端容器-为例" class="headerlink" title="配置[Windows Terminal(终端容器)为例]"></a>配置[Windows Terminal(终端容器)为例]</h3><p>∨→设置→外观→JetBrainsMono Nerd Font<br><em>Windows Terminal 是一个现代终端容器，PowerShell 是它里面运行的一个命令行环境。你可以在 Windows Terminal 中运行 Neovim，并通过它设置字体、主题和图标支持。</em></p>
-<hr>
-<h2 id="插件推荐-更新ing"><a href="#插件推荐-更新ing" class="headerlink" title="插件推荐(更新ing)"></a>插件推荐(更新ing)</h2><h3 id="总表"><a href="#总表" class="headerlink" title="总表"></a>总表</h3><p>neotree.lua<br>lualine.lua<br>which-key.lua<br>treesitter.lua<br>tokyonight.lua<br>bufferline.lua<br>smear_cursor.lua</p>
-<h3 id="强调-treesitter"><a href="#强调-treesitter" class="headerlink" title="强调(treesitter)"></a>强调(treesitter)</h3><p>安装clang<br>环境变量PATH ..&#x2F;bin</p>
-<hr>
-<h2 id="Tip"><a href="#Tip" class="headerlink" title="Tip"></a>Tip</h2><p>Hexo项目的<code>source/</code>目录下创建一个名为<code>CNAME</code>的文件名(无扩展名)内容为域名如：blog.get.top</p>
-]]></content>
-      <categories>
-        <category>-知识</category>
-      </categories>
-      <tags>
-        <tag>-教程 -nvim</tag>
       </tags>
   </entry>
 </search>
