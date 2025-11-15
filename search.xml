@@ -1,6 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Hello World</title>
+    <url>/2025/11/04/hello-world/</url>
+    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+]]></content>
+      <categories>
+        <category>原始</category>
+      </categories>
+      <tags>
+        <tag>Hexo</tag>
+        <tag>教程</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>如何在HexoBlog中插入图片</title>
     <url>/2025/11/09/%E5%A6%82%E4%BD%95%E5%9C%A8HexoBlog%E4%B8%AD%E6%8F%92%E5%85%A5%E5%9B%BE%E7%89%87/</url>
     <content><![CDATA[<style>
@@ -113,70 +138,6 @@ td, th {
       <tags>
         <tag>Blog</tag>
         <tag>插图</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Hello World</title>
-    <url>/2025/11/04/hello-world/</url>
-    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-]]></content>
-      <categories>
-        <category>原始</category>
-      </categories>
-      <tags>
-        <tag>Hexo</tag>
-        <tag>教程</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>配置nvim</title>
-    <url>/2025/11/11/%E9%85%8D%E7%BD%AEnvim/</url>
-    <content><![CDATA[<p>🧩 Nerd Font 在 Windows 的安装与管理总结</p>
-<ol>
-<li>📥 安装方式（Windows）<br>• 手动安装：• 下载 <code>.zip</code> 包（如 <code>Hack.zip</code>）并解压<br>• 双击 <code>.ttf</code> 文件 → 点击“安装”或“为所有用户安装”<br>• 安装后字体位于：<code>C:\Windows\Fonts</code><br>• 自动安装（PowerShell）：Get-ChildItem -Path “路径&#x2F;*.ttf” | ForEach-Object {<br> Start-Process -FilePath $_.FullName -Verb Install<br>}<br>• Scoop 安装（部分字体）：scoop bucket add nerd-fonts<br>scoop install Hack-NF</li>
-</ol>
-<hr>
-<ol start="2">
-<li>🧼 更新字体的推荐流程<br>不会自动删除旧字体，但会覆盖同名字体文件。<br>✅ 推荐更新步骤：</li>
-<li>删除旧字体（可选但推荐）：• 控制面板 → 字体 → 找到旧字体 → 删除<br>• 或使用 PowerShell：Remove-Item “$env:SystemRoot\Fonts\HackNerdFont-Regular.ttf” -Force</li>
-<li>下载新版 ZIP 包并解压</li>
-<li>自动安装所有 <code>.ttf</code> 文件（见上方 PowerShell）</li>
-<li>重启终端或编辑器以刷新字体渲染</li>
-</ol>
-<hr>
-<ol start="4">
-<li>🧪 验证字体是否安装成功<br>• 打开 PowerShell 或终端，输入：echo “<code>u{e0b0} </code>u{f0e7} &#96;u{f2c8}”<br>如果显示图标而非乱码，说明 Nerd Font 安装成功。</li>
-<li>📦 Neovim 配置字体（Windows）<br>Neovim 本身不设置字体，需在终端中配置：<br>Windows Terminal 设置字体：<br>setting-dafaults- appearance- font face<br>Neovide 设置字体：<br>vim.o.guifont &#x3D; “Hack Nerd Font:h14”</li>
-</ol>
-<hr>
-<h2 id="Windows-Terminal-是微软官方推出的现代化终端应用程序，用于在-Windows-上统一运行多种命令行环境，比如：•-PowerShell•-Command-Prompt（CMD）•-Windows-Subsystem-for-Linux（WSL）•-Git-Bash•-Azure-Cloud-Shell•-甚至-SSH-远程会话"><a href="#Windows-Terminal-是微软官方推出的现代化终端应用程序，用于在-Windows-上统一运行多种命令行环境，比如：•-PowerShell•-Command-Prompt（CMD）•-Windows-Subsystem-for-Linux（WSL）•-Git-Bash•-Azure-Cloud-Shell•-甚至-SSH-远程会话" class="headerlink" title="Windows Terminal 是微软官方推出的现代化终端应用程序，用于在 Windows 上统一运行多种命令行环境，比如：• PowerShell• Command Prompt（CMD）• Windows Subsystem for Linux（WSL）• Git Bash• Azure Cloud Shell• 甚至 SSH 远程会话"></a>Windows Terminal 是微软官方推出的现代化终端应用程序，用于在 Windows 上统一运行多种命令行环境，比如：<br>• PowerShell<br>• Command Prompt（CMD）<br>• Windows Subsystem for Linux（WSL）<br>• Git Bash<br>• Azure Cloud Shell<br>• 甚至 SSH 远程会话</h2><h2 id="🧱-它和-PowerShell-有什么关系？项目Windows-TerminalPowerShell类型终端容器（图形界面）命令行解释器（Shell）作用显示和管理多个命令行环境执行命令、脚本、系统管理任务字体设置✅-可以设置字体、配色、透明度等❌-不负责字体渲染是否运行-Neovim✅-可以运行-nvim✅-也可以运行-nvim是否支持标签页✅-多标签、多窗格❌-单窗口"><a href="#🧱-它和-PowerShell-有什么关系？项目Windows-TerminalPowerShell类型终端容器（图形界面）命令行解释器（Shell）作用显示和管理多个命令行环境执行命令、脚本、系统管理任务字体设置✅-可以设置字体、配色、透明度等❌-不负责字体渲染是否运行-Neovim✅-可以运行-nvim✅-也可以运行-nvim是否支持标签页✅-多标签、多窗格❌-单窗口" class="headerlink" title="🧱 它和 PowerShell 有什么关系？项目	Windows Terminal	PowerShell	类型	终端容器（图形界面）	命令行解释器（Shell）	作用	显示和管理多个命令行环境	执行命令、脚本、系统管理任务	字体设置	✅ 可以设置字体、配色、透明度等	❌ 不负责字体渲染	是否运行 Neovim	✅ 可以运行 nvim	✅ 也可以运行 nvim	是否支持标签页	✅ 多标签、多窗格	❌ 单窗口	"></a>🧱 它和 PowerShell 有什么关系？<br>项目	Windows Terminal	PowerShell	<br>类型	终端容器（图形界面）	命令行解释器（Shell）	<br>作用	显示和管理多个命令行环境	执行命令、脚本、系统管理任务	<br>字体设置	✅ 可以设置字体、配色、透明度等	❌ 不负责字体渲染	<br>是否运行 Neovim	✅ 可以运行 nvim	✅ 也可以运行 nvim	<br>是否支持标签页	✅ 多标签、多窗格	❌ 单窗口	</h2><p>🎨 为什么 Neovim 用户喜欢 Windows Terminal？<br>• 支持 Nerd Font 图标显示<br>• 支持 透明背景、主题切换、鼠标滚动<br>• 支持 多标签页、多窗格分屏<br>• 启动速度快，兼容性强<br>• 可与 WSL、Git Bash 等无缝集成</p>
-<hr>
-<p>⚙️ 如何设置字体为 Nerd Font？</p>
-<ol>
-<li>打开 Windows Terminal 设置（快捷键：<code>Ctrl + ,</code>）</li>
-<li>找到你常用的配置（如 PowerShell 或 WSL）</li>
-<li>设置字体名称，例如：”font”: {<br>  “face”: “Hack Nerd Font”<br>}</li>
-</ol>
-<hr>
-<p>🧠 总结一句话<br>Windows Terminal 是一个现代终端容器，PowerShell 是它里面运行的一个命令行环境。你可以在 Windows Terminal 中运行 Neovim，并通过它设置字体、主题和图标支持。</p>
-]]></content>
-      <categories>
-        <category>-知识</category>
-      </categories>
-      <tags>
-        <tag>-教程 -nvim</tag>
       </tags>
   </entry>
 </search>
