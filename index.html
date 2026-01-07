@@ -1,716 +1,178 @@
-<!DOCTYPE html>
-<html lang="zh-CN">
-<head>
-  <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
-<meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 8.1.1">
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
-  <link rel="mask-icon" href="/images/logo.svg" color="#222">
-
-<link rel="stylesheet" href="/css/main.css">
-
-
-<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
-
-<script id="hexo-configurations">
-    var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"pitoix.github.io","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":true},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":true,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideLeftIn"}},"path":"search.xml"};
-  </script>
-
-  <meta name="description" content="Excuse will turn your dreams into dust">
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>Pi</title><meta name="author" content="Pitoix"><meta name="copyright" content="Pitoix"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="Excuse will turn your dreams into dust">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Pi">
 <meta property="og:url" content="https://pitoix.github.io/index.html">
 <meta property="og:site_name" content="Pi">
 <meta property="og:description" content="Excuse will turn your dreams into dust">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://pitoix.github.io/img/avatar.png">
 <meta property="article:author" content="Pitoix">
 <meta name="twitter:card" content="summary">
-
-<link rel="canonical" href="https://pitoix.github.io/">
-
-
-<script id="page-configurations">
-  // https://hexo.io/docs/variables.html
-  CONFIG.page = {
-    sidebar: "",
-    isHome : true,
-    isPost : false,
-    lang   : 'zh-CN'
-  };
-</script>
-
-  <title>Pi</title>
-  
-
-
-
-
-
-
-  <noscript>
-  <style>
-  .use-motion .brand,
-  .use-motion .menu-item,
-  .sidebar-inner,
-  .use-motion .post-block,
-  .use-motion .pagination,
-  .use-motion .comments,
-  .use-motion .post-header,
-  .use-motion .post-body,
-  .use-motion .collection-header { opacity: initial; }
-
-  .use-motion .site-title,
-  .use-motion .site-subtitle {
-    opacity: initial;
-    top: initial;
-  }
-
-  .use-motion .logo-line-before i { left: initial; }
-  .use-motion .logo-line-after i { right: initial; }
-  </style>
-</noscript>
-
-</head>
-
-<body itemscope itemtype="http://schema.org/WebPage">
-  <div class="container use-motion">
-    <div class="headband"></div>
-
-    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"><div class="site-brand-container">
-  <div class="site-nav-toggle">
-    <div class="toggle" aria-label="切换导航栏">
-      <span class="toggle-line toggle-line-first"></span>
-      <span class="toggle-line toggle-line-middle"></span>
-      <span class="toggle-line toggle-line-last"></span>
-    </div>
-  </div>
-
-  <div class="site-meta">
-
-    <a href="/" class="brand" rel="start">
-      <span class="logo-line-before"><i></i></span>
-      <h1 class="site-title">Pi</h1>
-      <span class="logo-line-after"><i></i></span>
-    </a>
-  </div>
-
-  <div class="site-nav-right">
-    <div class="toggle popup-trigger">
-        <i class="fa fa-search fa-fw fa-lg"></i>
-    </div>
-  </div>
-</div>
-
-
-
-
-<nav class="site-nav">
-  <ul id="menu" class="main-menu menu">
-        <li class="menu-item menu-item-home">
-
-    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
-
-  </li>
-        <li class="menu-item menu-item-tags">
-
-    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
-
-  </li>
-        <li class="menu-item menu-item-categories">
-
-    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
-
-  </li>
-        <li class="menu-item menu-item-archives">
-
-    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
-
-  </li>
-      <li class="menu-item menu-item-search">
-        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
-        </a>
-      </li>
-  </ul>
-</nav>
-
-
-
-  <div class="search-pop-overlay">
-    <div class="popup search-popup">
-        <div class="search-header">
-  <span class="search-icon">
-    <i class="fa fa-search"></i>
-  </span>
-  <div class="search-input-container">
-    <input autocomplete="off" autocapitalize="off"
-           placeholder="搜索..." spellcheck="false"
-           type="search" class="search-input">
-  </div>
-  <span class="popup-btn-close">
-    <i class="fa fa-times-circle"></i>
-  </span>
-</div>
-<div id="search-result">
-  <div id="no-result">
-    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
-  </div>
-</div>
-
-    </div>
-  </div>
-
-</div>
+<meta name="twitter:image" content="https://pitoix.github.io/img/avatar.png"><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Pi",
+  "alternateName": [
+    "pitoix.github.io"
+  ],
+  "url": "https://pitoix.github.io/"
+}</script><link rel="shortcut icon" href="/img/avatar.png"><link rel="canonical" href="https://pitoix.github.io/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css?v=5.5.3"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.1.0/css/all.min.css"><script>
+    (() => {
       
-    </header>
-
-    
-  <div class="back-to-top">
-    <i class="fa fa-arrow-up"></i>
-    <span>0%</span>
-  </div>
-
-
-    <main class="main">
-      <div class="main-inner">
-        <div class="content-wrap">
-          
-
-          <div class="content index posts-expand">
-            
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://pitoix.github.io/Posts/%E9%85%8D%E7%BD%AEnvim/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Pitoix">
-      <meta itemprop="description" content="Excuse will turn your dreams into dust">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Pi">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/Posts/%E9%85%8D%E7%BD%AEnvim/" class="post-title-link" itemprop="url">配置nvim0.12</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2025-11-11 22:15:06" itemprop="dateCreated datePublished" datetime="2025-11-11T22:15:06+08:00">2025-11-11</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2025-11-16 03:12:26" itemprop="dateModified" datetime="2025-11-16T03:12:26+08:00">2025-11-16</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E7%9F%A5%E8%AF%86/" itemprop="url" rel="index"><span itemprop="name">知识</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p><u>Tips:下载好nvim 后建议新手输入“:Tutor”先熟悉操作</u></p>
-<hr>
-<h2 id="build系统变量"><a href="#build系统变量" class="headerlink" title="build系统变量"></a>build系统变量</h2><p>XDG_CONFIG_HOME<br>XDG_DATA_HOME<br>XDG_STATE_HOME <em>data文件总再次生成于c盘,checkhealth后发现改这个可以解决</em>::</p>
-<hr>
-<h2 id="Lazy-nvim下载"><a href="#Lazy-nvim下载" class="headerlink" title="Lazy.nvim下载"></a>Lazy.nvim下载</h2><h3 id="结构"><a href="#结构" class="headerlink" title="结构"></a>结构</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">~/.config/nvim</span><br><span class="line">├── lua</span><br><span class="line">│   ├── config</span><br><span class="line">│   │   └── lazy.lua</span><br><span class="line">│   └── plugins</span><br><span class="line">│       ├── spec1.lua</span><br><span class="line">│       ├── **</span><br><span class="line">│       └── spec2.lua</span><br><span class="line">└── init.lua</span><br></pre></td></tr></table></figure>
-<h3 id="init-lua"><a href="#init-lua" class="headerlink" title="init.lua"></a>init.lua</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">require(&quot;config.lazy&quot;)</span><br></pre></td></tr></table></figure>
-<h3 id="lazy-lua"><a href="#lazy-lua" class="headerlink" title="lazy.lua"></a>lazy.lua</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line">-- Bootstrap lazy.nvim</span><br><span class="line">local lazypath = vim.fn.stdpath(&quot;data&quot;) .. &quot;/lazy/lazy.nvim&quot;</span><br><span class="line">if not (vim.uv or vim.loop).fs_stat(lazypath) then</span><br><span class="line">  local lazyrepo = &quot;https://github.com/folke/lazy.nvim.git&quot;</span><br><span class="line">  local out = vim.fn.system(&#123; &quot;git&quot;, &quot;clone&quot;, &quot;--filter=blob:none&quot;, &quot;--branch=stable&quot;, lazyrepo, lazypath &#125;)</span><br><span class="line">  if vim.v.shell_error ~= 0 then</span><br><span class="line">    vim.api.nvim_echo(&#123;</span><br><span class="line">      &#123; &quot;Failed to clone lazy.nvim:\n&quot;, &quot;ErrorMsg&quot; &#125;,</span><br><span class="line">      &#123; out, &quot;WarningMsg&quot; &#125;,</span><br><span class="line">      &#123; &quot;\nPress any key to exit...&quot; &#125;,</span><br><span class="line">    &#125;, true, &#123;&#125;)</span><br><span class="line">    vim.fn.getchar()</span><br><span class="line">    os.exit(1)</span><br><span class="line">  end</span><br><span class="line">end</span><br><span class="line">vim.opt.rtp:prepend(lazypath)</span><br><span class="line"></span><br><span class="line">-- Make sure to setup `mapleader` and `maplocalleader` before</span><br><span class="line">-- loading lazy.nvim so that mappings are correct.</span><br><span class="line">-- This is also a good place to setup other settings (vim.opt)</span><br><span class="line">vim.g.mapleader = &quot; &quot;</span><br><span class="line">vim.g.maplocalleader = &quot;\\&quot;</span><br><span class="line"></span><br><span class="line">-- Setup lazy.nvim</span><br><span class="line">require(&quot;lazy&quot;).setup(&#123;</span><br><span class="line">  spec = &#123;</span><br><span class="line">    -- import your plugins</span><br><span class="line">    &#123; import = &quot;plugins&quot; &#125;,</span><br><span class="line">  &#125;,</span><br><span class="line">  -- Configure any other settings here. See the documentation for more details.</span><br><span class="line">  -- colorscheme that will be used when installing plugins.</span><br><span class="line">  install = &#123; colorscheme = &#123; &quot;habamax&quot; &#125; &#125;,</span><br><span class="line">  -- automatically check for plugin updates</span><br><span class="line">  checker = &#123; enabled = true &#125;,</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
-<hr>
-<h2 id="Nerd-Font-JetBrainsMono为例"><a href="#Nerd-Font-JetBrainsMono为例" class="headerlink" title="Nerd Font(JetBrainsMono为例)"></a><a target="_blank" rel="noopener" href="https://www.nerdfonts.com/font-downloads">Nerd Font(JetBrainsMono为例)</a></h2><h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><p>下载后解压 CTRL+A 全部安装                     </p>
-<h3 id="配置-Windows-Terminal-终端容器-为例"><a href="#配置-Windows-Terminal-终端容器-为例" class="headerlink" title="配置[Windows Terminal(终端容器)为例]"></a>配置[Windows Terminal(终端容器)为例]</h3><p>∨→设置→外观→JetBrainsMono Nerd Font<br><em>Windows Terminal 是一个现代终端容器，PowerShell 是它里面运行的一个命令行环境。你可以在 Windows Terminal 中运行 Neovim，并通过它设置字体、主题和图标支持。</em></p>
-<hr>
-<h2 id="插件推荐-更新ing"><a href="#插件推荐-更新ing" class="headerlink" title="插件推荐(更新ing)"></a>插件推荐(更新ing)</h2><h3 id="总表"><a href="#总表" class="headerlink" title="总表"></a>总表</h3><p>neotree.lua<br>lualine.lua<br>which-key.lua<br>treesitter.lua<br>tokyonight.lua<br>bufferline.lua<br>smear_cursor.lua</p>
-<h3 id="强调-treesitter"><a href="#强调-treesitter" class="headerlink" title="强调(treesitter)"></a>强调(treesitter)</h3><p>安装clang<br>环境变量PATH ..&#x2F;bin</p>
-<hr>
-<h2 id="Tip"><a href="#Tip" class="headerlink" title="Tip"></a>Tip</h2><p>Hexo项目的<code>source/</code>目录下创建一个名为<code>CNAME</code>的文件名(无扩展名)内容为域名如：blog.get.top</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://pitoix.github.io/Posts/%E5%A6%82%E4%BD%95%E5%9C%A8HexoBlog%E4%B8%AD%E6%8F%92%E5%85%A5%E5%9B%BE%E7%89%87/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Pitoix">
-      <meta itemprop="description" content="Excuse will turn your dreams into dust">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Pi">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/Posts/%E5%A6%82%E4%BD%95%E5%9C%A8HexoBlog%E4%B8%AD%E6%8F%92%E5%85%A5%E5%9B%BE%E7%89%87/" class="post-title-link" itemprop="url">如何在HexoBlog中插入图片</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2025-11-09 01:31:43" itemprop="dateCreated datePublished" datetime="2025-11-09T01:31:43+08:00">2025-11-09</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2025-11-16 10:05:56" itemprop="dateModified" datetime="2025-11-16T10:05:56+08:00">2025-11-16</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E7%9F%A5%E8%AF%86/" itemprop="url" rel="index"><span itemprop="name">知识</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <style>
-table {
-  table-layout: fixed;
-  width: 100%;
-}
-td, th {
-  word-wrap: break-word;
-  white-space: normal;
-}
-</style>
-
-<p><del>注意学习Markdown基本语法<a target="_blank" rel="noopener" href="https://markdown.com.cn/basic-syntax/">Markdown教程</a></del></p>
-<h2 id="🧩-Hexo-插入图片方法总览与对比"><a href="#🧩-Hexo-插入图片方法总览与对比" class="headerlink" title="🧩 Hexo 插入图片方法总览与对比"></a>🧩 Hexo 插入图片方法总览与对比</h2><table>
-<thead>
-<tr>
-<th>插入方式</th>
-<th>路径示例</th>
-<th>优点</th>
-<th>缺点</th>
-<th>推荐场景</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>文章资源文件夹</td>
-<td><code>!&#123;% asset_img photo.jpg 描述 %&#125;                  </code></td>
-<td>自动关联文章、结构清晰、支持主题预览</td>
-<td>需启用 post_asset_folder，语法特殊</td>
-<td>每篇文章独立资源管理</td>
-</tr>
-<tr>
-<td>全局资源文件夹</td>
-<td><code>![描述](/images/photo.jpg)                       </code></td>
-<td>简单直观、支持 Markdown 语法</td>
-<td>所有图片混在一起，难以维护</td>
-<td>多篇文章共享图片资源</td>
-</tr>
-<tr>
-<td>网络图片链接</td>
-<td><code>![描述](https://img.url/photo.jpg)               </code></td>
-<td>快速插入、无需本地存储</td>
-<td>图片可能失效、加载慢、依赖外部服务</td>
-<td>引用图床或第三方图片</td>
-</tr>
-<tr>
-<td>相对路径语法</td>
-<td><code>![描述](photo.jpg)</code>or<code>![](./name/photo.jpg)      </code></td>
-<td>编辑器预览方便</td>
-<td>Hexo 不一定能正确解析，首页可能不显示</td>
-<td>Typora 本地写作预览</td>
-</tr>
-<tr>
-<td>插件方式</td>
-<td><code>![描述](photo.jpg) + 插件支持                    </code></td>
-<td>自动处理路径、兼容 Markdown</td>
-<td>需安装插件、可能存在兼容性问题</td>
-<td>想用原生 Markdown 又要兼容Hexo</td>
-</tr>
-</tbody></table>
-<hr>
-<table>
-<thead>
-<tr>
-<th><br></th>
-<th><br></th>
-<th><br></th>
-<th><br></th>
-</tr>
-</thead>
-<tbody><tr>
-<td>绝对路径</td>
-<td>&#x2F;images&#x2F;photo.jpg</td>
-<td>图片放在 source&#x2F;images&#x2F; 中</td>
-<td>✅ 推荐（全局资源)</td>
-</tr>
-<tr>
-<td>相对路径</td>
-<td>.&#x2F;photo.jpg 或 photo.jpg</td>
-<td>图片放在文章同名资源文件夹中</td>
-<td>✅ 推荐（文章资源)</td>
-</tr>
-<tr>
-<td>本地路径</td>
-<td>C:\Users\你\Pictures\图.jpg</td>
-<td>本地 Markdown 编辑器预览</td>
-<td>❌ 不推荐</td>
-</tr>
-<tr>
-<td>Hexo标签</td>
-<td><code>&#123;% asset_img photo.jpg %&#125;</code></td>
-<td>启用 post_asset_folder 后使用</td>
-<td>✅ 强烈推荐</td>
-</tr>
-</tbody></table>
-<hr>
-<h2 id="🔧-推荐配置与操作步骤"><a href="#🔧-推荐配置与操作步骤" class="headerlink" title="🔧 推荐配置与操作步骤"></a>🔧 推荐配置与操作步骤</h2><p>✅ 启用 <code>post_asset_folder</code><br>在 <code>_config.yml</code> 中添加：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">post_asset_folder: <span class="literal">true</span></span><br><span class="line">执行：</span><br><span class="line">hexo new <span class="string">&quot;文章标题&quot;</span></span><br></pre></td></tr></table></figure>
-<p>生成结构：<br>source&#x2F;_posts&#x2F;<br>├── 文章标题.md<br>└── 文章标题&#x2F;<br>    └── photo.jpg<br>在 Markdown 中使用：<br><code>![]&#123;% asset_img photo.jpg 描述 %&#125;</code><br>📦 插件辅助（可选）<br>如果你想用原生 Markdown 语法插图但仍希望 Hexo正确解析，可以安装：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-asset-image --save</span><br><span class="line">但需注意兼容性问题。</span><br></pre></td></tr></table></figure>
-<h2 id="Thinking"><a href="#Thinking" class="headerlink" title="Thinking"></a>Thinking</h2><p>为什么标签能显示，路径却不行</p>
-<ol>
-<li>Hexo 的构建机制<br>• Hexo 并不会直接渲染 Markdown，而是将其转换为 HTML。<br>• 在转换过程中，Hexo 会识别 <code>&#123;% asset_img %&#125;</code> 标签，并自动将对应图片复制到 <code>public</code> 目录。<br>• 普通 Markdown 图片语法（如 <code>![图](photo.jpg)</code>）不会触发资源复制逻辑，除非你手动放置图片到 <code>source</code> 下的正确位置</li>
-</ol>
-<hr>
-<p><img src="/./%E5%A6%82%E4%BD%95%E5%9C%A8HexoBlog%E4%B8%AD%E6%8F%92%E5%85%A5%E5%9B%BE%E7%89%87/1.jpeg" alt="相对路径"><br>![文章资源]<img src="/Posts/%E5%A6%82%E4%BD%95%E5%9C%A8HexoBlog%E4%B8%AD%E6%8F%92%E5%85%A5%E5%9B%BE%E7%89%87/1.jpeg" class=""><br><img src="/2.jpeg" alt="相对路径"><br><img src="/imagines/2.jpeg" alt="全局资源"></p>
-<p>Tips:每次hexo new 的文档模板在scaffolds</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://pitoix.github.io/Posts/hello-world/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Pitoix">
-      <meta itemprop="description" content="Excuse will turn your dreams into dust">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Pi">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/Posts/hello-world/" class="post-title-link" itemprop="url">Hello World</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2025-11-04 00:00:00" itemprop="dateCreated datePublished" datetime="2025-11-04T00:00:00+08:00">2025-11-04</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2025-11-09 01:54:46" itemprop="dateModified" datetime="2025-11-09T01:54:46+08:00">2025-11-09</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E5%8E%9F%E5%A7%8B/" itemprop="url" rel="index"><span itemprop="name">原始</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-
-  
-
-
-
-          </div>
-          
-
-<script>
-  window.addEventListener('tabs:register', () => {
-    let { activeClass } = CONFIG.comments;
-    if (CONFIG.comments.storage) {
-      activeClass = localStorage.getItem('comments_active') || activeClass;
-    }
-    if (activeClass) {
-      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
-      if (activeTab) {
-        activeTab.click();
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
       }
     }
-  });
-  if (CONFIG.comments.storage) {
-    window.addEventListener('tabs:click', event => {
-      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
-      let commentClass = event.target.classList[1];
-      localStorage.setItem('comments_active', commentClass);
-    });
-  }
-</script>
 
-        </div>
-          
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
   
-  <div class="toggle sidebar-toggle">
-    <span class="toggle-line toggle-line-first"></span>
-    <span class="toggle-line toggle-line-middle"></span>
-    <span class="toggle-line toggle-line-last"></span>
-  </div>
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
 
-  <aside class="sidebar">
-    <div class="sidebar-inner">
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
 
-      <ul class="sidebar-nav motion-element">
-        <li class="sidebar-nav-toc">
-          文章目录
-        </li>
-        <li class="sidebar-nav-overview">
-          站点概览
-        </li>
-      </ul>
-
-      <!--noindex-->
-      <div class="post-toc-wrap sidebar-panel">
-      </div>
-      <!--/noindex-->
-
-      <div class="site-overview-wrap sidebar-panel">
-        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-  <p class="site-author-name" itemprop="name">Pitoix</p>
-  <div class="site-description" itemprop="description">Excuse will turn your dreams into dust</div>
-</div>
-<div class="site-state-wrap motion-element">
-  <nav class="site-state">
-      <div class="site-state-item site-state-posts">
-          <a href="/archives/">
+      const theme = saveToLocal.get('theme')
+    
+          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
         
-          <span class="site-state-item-count">3</span>
-          <span class="site-state-item-name">日志</span>
-        </a>
-      </div>
-      <div class="site-state-item site-state-categories">
-            <a href="/categories/">
-          
-        <span class="site-state-item-count">2</span>
-        <span class="site-state-item-name">分类</span></a>
-      </div>
-      <div class="site-state-item site-state-tags">
-            <a href="/tags/">
-          
-        <span class="site-state-item-count">3</span>
-        <span class="site-state-item-name">标签</span></a>
-      </div>
-  </nav>
-</div>
-  <div class="links-of-author motion-element">
-      <span class="links-of-author-item">
-        <a href="https://github.com/Pitoix" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;Pitoix" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
-      </span>
-      <span class="links-of-author-item">
-        <a href="mailto:Pitoix@mail.pitopis.org" title="E-Mail → mailto:Pitoix@mail.pitopis.org" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
-      </span>
-  </div>
-
-
-
-      </div>
-
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.12.0/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'Pi',
+  isHighlightShrink: false,
+  isToc: false,
+  pageType: 'home'
+}</script><meta name="generator" content="Hexo 8.1.1"></head><body><div class="page" id="body-wrap"><header class="full_page" id="page-header" style="background-image: url(/img/0.png);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">Pi</span></a></span><div id="menus"></div></nav><div id="site-info"><h1 id="site-title">Pi</h1><div id="site_social_icons"><a class="social-icon" href="mailto:Pitoix@mail.pitopis.org" target="_blank" title="Email"><i class="fas fa-envelope" style="color: #4a7dbe;"></i></a></div></div><div id="scroll-down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout" id="content-inner"><div class="recent-posts nc" id="recent-posts"><div class="recent-post-items"><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/Posts/%E9%85%8D%E7%BD%AEnvim/" title="配置nvim0.12">配置nvim0.12</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2025-11-11T14:15:06.000Z" title="发表于 2025-11-11 22:15:06">2025-11-11</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E7%9F%A5%E8%AF%86/">知识</a></span></div><div class="content">Tips:下载好nvim 后建议新手输入“:Tutor”先熟悉操作  build系统变量XDG_CONFIG_HOMEXDG_DATA_HOMEXDG_STATE_HOME data文件总再次生成于c盘,checkhealth后发现改这个可以解决::  Lazy.nvim下载结构123456789~/.config/nvim├── lua│   ├── config│   │   └── lazy.lua│   └── plugins│       ├── spec1.lua│       ├── **│       └── spec2.lua└── init.lua init.lua1require(&quot;config.lazy&quot;) lazy.lua1234567891011121314151617181920212223242526272829303132333435-- Bootstrap lazy.nvimlocal lazypath = vim.fn.stdpath(&quot;data&quot;) .. &quot;/lazy/lazy.nvim&q...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/Posts/%E5%A6%82%E4%BD%95%E5%9C%A8HexoBlog%E4%B8%AD%E6%8F%92%E5%85%A5%E5%9B%BE%E7%89%87/" title="如何在HexoBlog中插入图片">如何在HexoBlog中插入图片</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2025-11-08T17:31:43.000Z" title="发表于 2025-11-09 01:31:43">2025-11-09</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E7%9F%A5%E8%AF%86/">知识</a></span></div><div class="content"> table {   table-layout: fixed;   width: 100%; } td, th {   word-wrap: break-word;   white-space: normal; }   注意学习Markdown基本语法Markdown教程 🧩 Hexo 插入图片方法总览与对比   插入方式 路径示例 优点 缺点 推荐场景    文章资源文件夹 !&#123;% asset_img photo.jpg 描述 %&#125;                   自动关联文章、结构清晰、支持主题预览 需启用 post_asset_folder，语法特殊 每篇文章独立资源管理   全局资源文件夹 ![描述](/images/photo.jpg)                        简单直观、支持 Markdown 语法 所有图片混在一起，难以维护 多篇文章共享图片资源   网络图片链接 ![描述](https://img.url/photo.jpg)                快速插入、无需本地存储 图片可能失效、加载慢、依赖外部服务 引...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/Posts/hello-world/" title="Hello World">Hello World</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2025-11-03T16:00:00.000Z" title="发表于 2025-11-04 00:00:00">2025-11-04</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E5%8E%9F%E5%A7%8B/">原始</a></span></div><div class="content">Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick StartCreate a new post1$ hexo new &quot;My New Post&quot;  More info: Writing Run server1$ hexo server  More info: Server Generate static files1$ hexo generate  More info: Generating Deploy to remote sites1$ hexo deploy  More info: Deployment </div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/img/avatar.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">Pitoix</div><div class="author-info-description">Excuse will turn your dreams into dust</div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">3</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">3</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">2</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/Pitoix"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons"><a class="social-icon" href="mailto:Pitoix@mail.pitopis.org" target="_blank" title="Email"><i class="fas fa-envelope" style="color: #4a7dbe;"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/Posts/%E9%85%8D%E7%BD%AEnvim/" title="配置nvim0.12">配置nvim0.12</a><time datetime="2025-11-11T14:15:06.000Z" title="发表于 2025-11-11 22:15:06">2025-11-11</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/Posts/%E5%A6%82%E4%BD%95%E5%9C%A8HexoBlog%E4%B8%AD%E6%8F%92%E5%85%A5%E5%9B%BE%E7%89%87/" title="如何在HexoBlog中插入图片">如何在HexoBlog中插入图片</a><time datetime="2025-11-08T17:31:43.000Z" title="发表于 2025-11-09 01:31:43">2025-11-09</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/Posts/hello-world/" title="Hello World">Hello World</a><time datetime="2025-11-03T16:00:00.000Z" title="发表于 2025-11-04 00:00:00">2025-11-04</time></div></div></div></div><div class="card-widget card-categories"><div class="item-headline">
+            <i class="fas fa-folder-open"></i>
+            <span>分类</span>
+            
+          </div>
+          <ul class="card-category-list" id="aside-cat-list">
+            <li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E5%8E%9F%E5%A7%8B/"><span class="card-category-list-name">原始</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E7%9F%A5%E8%AF%86/"><span class="card-category-list-name">知识</span><span class="card-category-list-count">2</span></a></li>
+          </ul></div><div class="card-widget card-tags"><div class="item-headline"><i class="fas fa-tags"></i><span>标签</span></div><div class="card-tag-cloud"><a href="/tags/Blog/" style="font-size: 1.1em; color: #999">Blog</a> <a href="/tags/Hexo/" style="font-size: 1.1em; color: #999">Hexo</a> <a href="/tags/%E6%95%99%E7%A8%8B/" style="font-size: 1.5em; color: #99a9bf">教程</a></div></div><div class="card-widget card-archives">
+    <div class="item-headline">
+      <i class="fas fa-archive"></i>
+      <span>归档</span>
+      
     </div>
-  </aside>
-  <div id="sidebar-dimmer"></div>
-
-
-      </div>
-    </main>
-
-    <footer class="footer">
-      <div class="footer-inner">
-        
-
-        
-
-<div class="copyright">
   
-  &copy; 
-  <span itemprop="copyrightYear">2026</span>
-  <span class="with-love">
-    <i class="fa fa-heart"></i>
-  </span>
-  <span class="author" itemprop="copyrightHolder">Pitoix</span>
-</div>
-  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
-  </div>
-
-        
-
-
-
-
-
-
-
-
-      </div>
-    </footer>
-  </div>
-
-  
-  <script src="/lib/anime.min.js"></script>
-  <script src="/lib/velocity/velocity.min.js"></script>
-  <script src="/lib/velocity/velocity.ui.min.js"></script>
-
-<script src="/js/utils.js"></script>
-
-<script src="/js/motion.js"></script>
-
-
-<script src="/js/schemes/pisces.js"></script>
-
-
-<script src="/js/next-boot.js"></script>
-
-
-
-
-  
-
-
-
-
-  
-<script src="/js/local-search.js"></script>
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-
-  
-
-</body>
-</html>
+    <ul class="card-archive-list">
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2025/11/">
+            <span class="card-archive-list-date">
+              十一月 2025
+            </span>
+            <span class="card-archive-list-count">3</span>
+          </a>
+        </li>
+      
+    </ul>
+  </div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>网站信息</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">文章数目 :</div><div class="item-count">3</div></div><div class="webinfo-item"><div class="item-name">本站访客数 :</div><div class="item-count" id="busuanzi_value_site_uv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">本站总浏览量 :</div><div class="item-count" id="busuanzi_value_site_pv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">最后更新时间 :</div><div class="item-count" id="last-push-date" data-lastPushDate="2026-01-07T11:13:34.856Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div></div></div></div></div></main><footer id="footer"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;&nbsp;2025 - 2026 By Pitoix</span><span class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo 8.1.1</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.5.3</a></span></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=5.5.3"></script><script src="/js/main.js?v=5.5.3"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
