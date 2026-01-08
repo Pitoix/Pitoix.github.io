@@ -1,12 +1,22 @@
-/* === 鼠标点击五角星 + 粒子动效 === */
-/* ⭐ 星星：固定在屏幕上（不随内容滚动） */
+/* === Canvas 全屏渲染层 === */
+#fx-canvas {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 9998;
+}
+/* === 星星（CSS clip-path） === */
 .click-star {
-  position: fixed;
-  width: 30px;
-  height: 30px;
+  position: absolute;
+  width: 35px;
+  height: 35px;
   pointer-events: none;
   transform: translate(-50%, -50%);
   z-index: 9999;
+  opacity: 1;
 }
 .click-star::before {
   content: '';
@@ -42,6 +52,84 @@
   transform: scale(1);
   z-index: 9998;
   animation: trail-fade 0.4s linear forwards;
+}
+/* 星星缩小动画 */
+/* 粒子尾迹淡出 */
+@-moz-keyframes star-shrink {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(0.2);
+    clip-path: circle(22% at 50% 50%);
+  }
+  65% {
+    transform: scale(0.3);
+    clip-path: circle(30% at 50% 50%);
+  }
+  100% {
+    transform: scale(0);
+    clip-path: circle(0% at 50% 50%);
+    opacity: 0;
+  }
+}
+@-webkit-keyframes star-shrink {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(0.2);
+    clip-path: circle(22% at 50% 50%);
+  }
+  65% {
+    transform: scale(0.3);
+    clip-path: circle(30% at 50% 50%);
+  }
+  100% {
+    transform: scale(0);
+    clip-path: circle(0% at 50% 50%);
+    opacity: 0;
+  }
+}
+@-o-keyframes star-shrink {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(0.2);
+    clip-path: circle(22% at 50% 50%);
+  }
+  65% {
+    transform: scale(0.3);
+    clip-path: circle(30% at 50% 50%);
+  }
+  100% {
+    transform: scale(0);
+    clip-path: circle(0% at 50% 50%);
+    opacity: 0;
+  }
+}
+@keyframes star-shrink {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(0.2);
+    clip-path: circle(22% at 50% 50%);
+  }
+  65% {
+    transform: scale(0.3);
+    clip-path: circle(30% at 50% 50%);
+  }
+  100% {
+    transform: scale(0);
+    clip-path: circle(0% at 50% 50%);
+    opacity: 0;
+  }
 }
 @-moz-keyframes star-shrink {
   0% {
