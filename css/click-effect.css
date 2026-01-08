@@ -1,0 +1,215 @@
+/* === 鼠标点击五角星 + 粒子动效 === */
+.click-star {
+  position: fixed;
+  width: 40px;
+  height: 40px;
+  pointer-events: none;
+  transform: translate(-50%, -50%) scale(1);
+  z-index: 9999;
+}
+.click-star::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  margin: auto;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #ffe6f2, #ffb7d5);
+  clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+  animation: star-shrink 0.45s cubic-bezier(0.55, 0.05, 0.67, 0.19) forwards;
+}
+/* 粒子本体 */
+.click-particle {
+  position: fixed;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9999;
+  opacity: 0;
+  transform-origin: center;
+  will-change: transform, opacity;
+  animation: particle-move 0.6s cubic-bezier(0.22, 0.61, 0.36, 1) forwards;
+}
+/* 粒子飞散 + 重力 */
+/* 粒子路径痕迹 */
+.particle-trail {
+  position: fixed;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  pointer-events: none;
+  background: var(--trail-color, rgba(255,200,220,0.9));
+  opacity: 1;
+  transform: scale(1);
+  z-index: 9998;
+  animation: trail-fade 0.4s linear forwards;
+}
+@-moz-keyframes star-shrink {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(0.2);
+    clip-path: circle(22% at 50% 50%);
+  }
+  65% {
+    transform: scale(0.3);
+    clip-path: circle(30% at 50% 50%);
+  }
+  100% {
+    transform: scale(0);
+    clip-path: circle(0% at 50% 50%);
+    opacity: 0;
+  }
+}
+@-webkit-keyframes star-shrink {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(0.2);
+    clip-path: circle(22% at 50% 50%);
+  }
+  65% {
+    transform: scale(0.3);
+    clip-path: circle(30% at 50% 50%);
+  }
+  100% {
+    transform: scale(0);
+    clip-path: circle(0% at 50% 50%);
+    opacity: 0;
+  }
+}
+@-o-keyframes star-shrink {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(0.2);
+    clip-path: circle(22% at 50% 50%);
+  }
+  65% {
+    transform: scale(0.3);
+    clip-path: circle(30% at 50% 50%);
+  }
+  100% {
+    transform: scale(0);
+    clip-path: circle(0% at 50% 50%);
+    opacity: 0;
+  }
+}
+@keyframes star-shrink {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(0.2);
+    clip-path: circle(22% at 50% 50%);
+  }
+  65% {
+    transform: scale(0.3);
+    clip-path: circle(30% at 50% 50%);
+  }
+  100% {
+    transform: scale(0);
+    clip-path: circle(0% at 50% 50%);
+    opacity: 0;
+  }
+}
+@-moz-keyframes particle-move {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
+  60% {
+    opacity: 1;
+  }
+  100% {
+    transform: translate(var(--dx), calc(var(--dy) + 20px)) scale(0.35);
+    opacity: 0;
+  }
+}
+@-webkit-keyframes particle-move {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
+  60% {
+    opacity: 1;
+  }
+  100% {
+    transform: translate(var(--dx), calc(var(--dy) + 20px)) scale(0.35);
+    opacity: 0;
+  }
+}
+@-o-keyframes particle-move {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
+  60% {
+    opacity: 1;
+  }
+  100% {
+    transform: translate(var(--dx), calc(var(--dy) + 20px)) scale(0.35);
+    opacity: 0;
+  }
+}
+@keyframes particle-move {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
+  60% {
+    opacity: 1;
+  }
+  100% {
+    transform: translate(var(--dx), calc(var(--dy) + 20px)) scale(0.35);
+    opacity: 0;
+  }
+}
+@-moz-keyframes trail-fade {
+  0% {
+    opacity: 0.9;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0.3);
+  }
+}
+@-webkit-keyframes trail-fade {
+  0% {
+    opacity: 0.9;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0.3);
+  }
+}
+@-o-keyframes trail-fade {
+  0% {
+    opacity: 0.9;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0.3);
+  }
+}
+@keyframes trail-fade {
+  0% {
+    opacity: 0.9;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0.3);
+  }
+}
