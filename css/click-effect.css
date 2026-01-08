@@ -1,10 +1,11 @@
 /* === 鼠标点击五角星 + 粒子动效 === */
+/* ⭐ 星星：固定在屏幕上（不随内容滚动） */
 .click-star {
   position: fixed;
-  width: 40px;
-  height: 40px;
+  width: 30px;
+  height: 30px;
   pointer-events: none;
-  transform: translate(-50%, -50%) scale(1);
+  transform: translate(-50%, -50%);
   z-index: 9999;
 }
 .click-star::before {
@@ -18,23 +19,20 @@
   clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
   animation: star-shrink 0.45s cubic-bezier(0.55, 0.05, 0.67, 0.19) forwards;
 }
-/* 粒子本体 */
+/* ⭐ 粒子：跟随文档内容（随滚动移动） */
 .click-particle {
-  position: fixed;
+  position: absolute;
   width: 6px;
   height: 6px;
   border-radius: 50%;
   pointer-events: none;
   z-index: 9999;
-  opacity: 0;
-  transform-origin: center;
+  opacity: 1;
   will-change: transform, opacity;
-  animation: particle-move 0.6s cubic-bezier(0.22, 0.61, 0.36, 1) forwards;
 }
-/* 粒子飞散 + 重力 */
-/* 粒子路径痕迹 */
+/* ⭐ 轨迹：跟随文档内容 */
 .particle-trail {
-  position: fixed;
+  position: absolute;
   width: 4px;
   height: 4px;
   border-radius: 50%;
@@ -118,58 +116,6 @@
   100% {
     transform: scale(0);
     clip-path: circle(0% at 50% 50%);
-    opacity: 0;
-  }
-}
-@-moz-keyframes particle-move {
-  0% {
-    transform: translate(-50%, -50%) scale(1);
-    opacity: 1;
-  }
-  60% {
-    opacity: 1;
-  }
-  100% {
-    transform: translate(var(--dx), calc(var(--dy) + 20px)) scale(0.35);
-    opacity: 0;
-  }
-}
-@-webkit-keyframes particle-move {
-  0% {
-    transform: translate(-50%, -50%) scale(1);
-    opacity: 1;
-  }
-  60% {
-    opacity: 1;
-  }
-  100% {
-    transform: translate(var(--dx), calc(var(--dy) + 20px)) scale(0.35);
-    opacity: 0;
-  }
-}
-@-o-keyframes particle-move {
-  0% {
-    transform: translate(-50%, -50%) scale(1);
-    opacity: 1;
-  }
-  60% {
-    opacity: 1;
-  }
-  100% {
-    transform: translate(var(--dx), calc(var(--dy) + 20px)) scale(0.35);
-    opacity: 0;
-  }
-}
-@keyframes particle-move {
-  0% {
-    transform: translate(-50%, -50%) scale(1);
-    opacity: 1;
-  }
-  60% {
-    opacity: 1;
-  }
-  100% {
-    transform: translate(var(--dx), calc(var(--dy) + 20px)) scale(0.35);
     opacity: 0;
   }
 }

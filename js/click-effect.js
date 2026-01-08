@@ -1,20 +1,23 @@
 console.log("click-effect.js 已加载");
 
+
+console.log("click-effect.js 已加载");
+
 document.addEventListener('click', function (e) {
   if (e.button !== 0) return;
 
-  const x = e.clientX;
-  const y = e.clientY;
+  const x = e.pageX;  // ⭐ 文档坐标
+  const y = e.pageY;
 
-  // 创建星星
+  // 创建星星（固定在屏幕）
   const star = document.createElement('div');
   star.className = 'click-star';
-  star.style.left = x + 'px';
-  star.style.top = y + 'px';
+  star.style.left = e.clientX + 'px'; // ⭐ 屏幕坐标
+  star.style.top = e.clientY + 'px';
   document.body.appendChild(star);
   star.addEventListener('animationend', () => star.remove());
 
-  // 延迟生成粒子
+  // 延迟生成粒子（跟随文档）
   setTimeout(() => {
     for (let i = 0; i < 12; i++) {
       createParticle(x, y);
@@ -33,7 +36,7 @@ function createTrail(x, y, color) {
   setTimeout(() => t.remove(), 400);
 }
 
-/* 创建粒子 */
+/* 创建粒子（JS 驱动真实运动） */
 function createParticle(x, y) {
   const p = document.createElement('div');
   p.className = 'click-particle';
@@ -41,31 +44,50 @@ function createParticle(x, y) {
   const color = `hsl(${Math.random() * 360}, 85%, 75%)`;
   p.style.background = color;
 
-  const angle = Math.random() * Math.PI * 2;
-  const distance = 60 + Math.random() * 40;
-
-  const dx = Math.cos(angle) * distance;
-  const dy = Math.sin(angle) * distance;
-
-  p.style.setProperty('--dx', dx + 'px');
-  p.style.setProperty('--dy', dy + 'px');
-
+  // ⭐ 粒子初始位置（文档坐标）
   p.style.left = x + 'px';
   p.style.top = y + 'px';
 
   document.body.appendChild(p);
 
-  // 生成路径痕迹
-  let count = 0;
-  const steps = 12;
+  // 初速度
+  const angle = Math.random() * Math.PI * 2;
+  const speed = 3 + Math.random() * 2;
 
-  const trailTimer = setInterval(() => {
-    const progress = count / steps;
-    createTrail(x + dx * progress, y + dy * progress, color);
-    count++;
-    if (count > steps) clearInterval(trailTimer);
-  }, 20);
+  let vx = Math.cos(angle) * speed;
+  let vy = Math.sin(angle) * speed;
 
-  setTimeout(() => p.remove(), 600);
+  // 柔和重力
+  const gravity = 0.12;
+
+  // ⭐ 相对位移
+  let px = 0;
+  let py = 0;
+
+  let life = 0;
+  const maxLife = 40;
+
+  function animate() {
+    life++;
+
+    vy += gravity;
+    px += vx;
+    py += vy;
+
+    // 粒子本体
+    p.style.transform = `translate(${px}px, ${py}px) scale(${1 - life / maxLife})`;
+    p.style.opacity = 1 - life / maxLife;
+
+    // 轨迹（文档坐标）
+    createTrail(x + px, y + py, color);
+
+    if (life < maxLife) {
+      requestAnimationFrame(animate);
+    } else {
+      p.remove();
+    }
+  }
+
+  animate();
 }
 
