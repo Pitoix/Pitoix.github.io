@@ -8,7 +8,7 @@
   pointer-events: none;
   z-index: 9998;
 }
-/* === 星星（CSS clip-path） === */
+/* === ⭐（CSS clip-path） === */
 .click-star {
   position: absolute;
   width: 35px;
@@ -25,11 +25,12 @@
   margin: auto;
   width: 100%;
   height: 100%;
-  background: linear-gradient(135deg, #ffe6f2, #ffb7d5);
+  background: linear-gradient(135deg, var(--c1), var(--c2));
   clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
-  animation: star-shrink 0.45s cubic-bezier(0.55, 0.05, 0.67, 0.19) forwards;
+  animation: star-shrink-bounce 0.55s cubic-bezier(0.55, 0.05, 0.67, 0.19) forwards;
 }
-/* ⭐ 粒子：跟随文档内容（随滚动移动） */
+/* 二段缩小 */
+/* ⭐粒子 */
 .click-particle {
   position: absolute;
   width: 6px;
@@ -40,7 +41,7 @@
   opacity: 1;
   will-change: transform, opacity;
 }
-/* ⭐ 轨迹：跟随文档内容 */
+/* ⭐轨迹 */
 .particle-trail {
   position: absolute;
   width: 4px;
@@ -53,20 +54,24 @@
   z-index: 9998;
   animation: trail-fade 0.4s linear forwards;
 }
-/* 星星缩小动画 */
+/* ⭐缩小动画 */
 /* 粒子尾迹淡出 */
-@-moz-keyframes star-shrink {
+@-moz-keyframes star-shrink-bounce {
   0% {
     transform: scale(1);
     opacity: 1;
   }
-  50% {
-    transform: scale(0.2);
+  40% {
+    transform: scale(0.25);
     clip-path: circle(22% at 50% 50%);
   }
-  65% {
-    transform: scale(0.3);
+  60% {
+    transform: scale(0.38);
     clip-path: circle(30% at 50% 50%);
+  }
+  80% {
+    transform: scale(0.18);
+    clip-path: circle(15% at 50% 50%);
   }
   100% {
     transform: scale(0);
@@ -74,18 +79,22 @@
     opacity: 0;
   }
 }
-@-webkit-keyframes star-shrink {
+@-webkit-keyframes star-shrink-bounce {
   0% {
     transform: scale(1);
     opacity: 1;
   }
-  50% {
-    transform: scale(0.2);
+  40% {
+    transform: scale(0.25);
     clip-path: circle(22% at 50% 50%);
   }
-  65% {
-    transform: scale(0.3);
+  60% {
+    transform: scale(0.38);
     clip-path: circle(30% at 50% 50%);
+  }
+  80% {
+    transform: scale(0.18);
+    clip-path: circle(15% at 50% 50%);
   }
   100% {
     transform: scale(0);
@@ -93,18 +102,22 @@
     opacity: 0;
   }
 }
-@-o-keyframes star-shrink {
+@-o-keyframes star-shrink-bounce {
   0% {
     transform: scale(1);
     opacity: 1;
   }
-  50% {
-    transform: scale(0.2);
+  40% {
+    transform: scale(0.25);
     clip-path: circle(22% at 50% 50%);
   }
-  65% {
-    transform: scale(0.3);
+  60% {
+    transform: scale(0.38);
     clip-path: circle(30% at 50% 50%);
+  }
+  80% {
+    transform: scale(0.18);
+    clip-path: circle(15% at 50% 50%);
   }
   100% {
     transform: scale(0);
@@ -112,18 +125,22 @@
     opacity: 0;
   }
 }
-@keyframes star-shrink {
+@keyframes star-shrink-bounce {
   0% {
     transform: scale(1);
     opacity: 1;
   }
-  50% {
-    transform: scale(0.2);
+  40% {
+    transform: scale(0.25);
     clip-path: circle(22% at 50% 50%);
   }
-  65% {
-    transform: scale(0.3);
+  60% {
+    transform: scale(0.38);
     clip-path: circle(30% at 50% 50%);
+  }
+  80% {
+    transform: scale(0.18);
+    clip-path: circle(15% at 50% 50%);
   }
   100% {
     transform: scale(0);

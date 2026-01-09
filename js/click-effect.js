@@ -1,13 +1,3 @@
-
-/*************************************************
- * click-effect.js（最终整合版）
- * Canvas 粒子 + 尾迹粒子 + 星星 DOM
- * 全部随页面滚动（absolute）
- *************************************************/
-
-console.log("Canvas FX 最终整合版已加载");
-
-
 /* ============================================================
  * 1. 工具函数：正态分布（Box–Muller）
  * ============================================================ */
@@ -61,7 +51,7 @@ const FX = {
     this.trails.push({
       x, y,
       life: 0,
-      maxLife: 30,  // ⭐ 这里控制痕迹长度
+      maxLife: 30,  // 控制痕迹长度
       color
     });
   },
@@ -88,7 +78,7 @@ const FX = {
       ctx.arc(p.x, p.y, 3 * scale, 0, Math.PI * 2);
       ctx.fill();
 
-      // ⭐ 每帧生成尾迹粒子（完全复刻 DOM 版）
+      // ⭐ 每帧生成尾迹粒子
       this.addTrail(p.x, p.y, p.color);
     }
 
@@ -113,7 +103,7 @@ FX.init();
 
 
 /* ============================================================
- * 3. 星星 DOM（随页面滚动）
+ * 3. 星星 DOM
  * ============================================================ */
 function createStar(x, y) {
   const star = document.createElement("div");
@@ -121,9 +111,39 @@ function createStar(x, y) {
   star.style.left = x + "px";
   star.style.top = y + "px";
   document.body.appendChild(star);
-
+  // ⭐ 调用颜色渐变动画
+  animateStarColor(star);
   star.addEventListener("animationend", () => star.remove());
   setTimeout(() => star.remove(), 600);
+}
+
+/* ============================================================
+ * ⭐⭐ 颜色渐变函数
+ * ============================================================ */
+
+// 颜色插值函数（RGB 或 HSL）
+function lerp(a, b, t) { return a + (b - a) * t; }
+
+function lerpHSL(h1, s1, l1, h2, s2, l2, t) {
+  const h = lerp(h1, h2, t);
+  const s = lerp(s1, s2, t);
+  const l = lerp(l1, l2, t);
+  return `hsl(${h}, ${s}%, ${l}%)`;
+}
+
+function animateStarColor(star) {
+  let t = 0;
+
+  const timer = setInterval(() => {
+    t += 0.05;
+    if (t >= 1) { clearInterval(timer); return; }
+
+    const c1 = lerpHSL(330, 90, 95, 330, 85, 75, t);
+    const c2 = lerpHSL(330, 85, 75, 330, 80, 60, t);
+
+    star.style.setProperty("--c1", c1);
+    star.style.setProperty("--c2", c2);
+  }, 16);
 }
 
 
@@ -139,7 +159,7 @@ document.addEventListener("click", e => {
   createStar(x, y);
 
   setTimeout(() => {
-    for (let i = 0; i < 12; i++) {
+    for (let i = 0; i < 20; i++) {
       const color = `hsl(${Math.random() * 360}, 85%, 75%)`;
       FX.addParticle(x, y, color);
     }
