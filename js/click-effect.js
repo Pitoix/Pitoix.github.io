@@ -17,19 +17,30 @@ const FX = {
   particles: [],  // 主粒子
   trails: [],     // 尾迹粒子
 
-  init() {
-    this.canvas = document.getElementById("fx-canvas");
-    this.ctx = this.canvas.getContext("2d");
+init() {
+  this.canvas = document.getElementById("fx-canvas");
+  this.ctx = this.canvas.getContext("2d");
 
-    const resize = () => {
-      this.canvas.width = document.documentElement.scrollWidth;   // ⭐ 页面宽度
-      this.canvas.height = document.documentElement.scrollHeight; // ⭐ 页面高度
-    };
-    resize();
-    window.addEventListener("resize", resize);
+  const resize = () => {
+    const dpr = window.devicePixelRatio || 1;
 
-    requestAnimationFrame(() => this.update());
-  },
+    const w = document.documentElement.scrollWidth;
+    const h = document.documentElement.scrollHeight;
+
+    this.canvas.width = w * dpr;
+    this.canvas.height = h * dpr;
+
+    this.canvas.style.width = w + "px";
+    this.canvas.style.height = h + "px";
+
+    this.ctx.scale(dpr, dpr);
+  };
+
+  resize();
+  window.addEventListener("resize", resize);
+
+  requestAnimationFrame(() => this.update());
+},
 
   /* === 添加主粒子 === */
   addParticle(x, y, color) {
