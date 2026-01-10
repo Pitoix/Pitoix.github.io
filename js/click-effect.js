@@ -33,7 +33,6 @@ init() {
     this.canvas.style.width = w + "px";
     this.canvas.style.height = h + "px";
 
-    this.ctx.scale(dpr, dpr);
   };
 
   resize();
@@ -70,7 +69,10 @@ init() {
   /* === 渲染循环 === */
   update() {
     const ctx = this.ctx;
-    ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
+    const dpr = window.devicePixelRatio || 1;
+    ctx.setTransform(1, 0, 0, 1, 0, 0);
+    ctx.scale(dpr, dpr);
+    ctx.clearRect(0, 0, this.canvas.width / dpr, this.canvas.height / dpr);
 
     /* === 主粒子 === */
     this.particles = this.particles.filter(p => p.life < p.maxLife);
