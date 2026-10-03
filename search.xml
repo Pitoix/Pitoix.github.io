@@ -48,7 +48,7 @@
         <category>知识</category>
       </categories>
       <tags>
-        <tag>nvim</tag>
+        <tag>NVIM</tag>
       </tags>
   </entry>
   <entry>
@@ -164,7 +164,7 @@ td, th {
         <category>知识</category>
       </categories>
       <tags>
-        <tag>blog</tag>
+        <tag>Blog</tag>
       </tags>
   </entry>
   <entry>
@@ -193,13 +193,116 @@ td, th {
 <p>用于查看学校新闻、通知公告、院系部门信息以及其他官方服务入口。</p>
 ]]></content>
       <categories>
-        <category>推荐</category>
+        <category>资源分享</category>
       </categories>
       <tags>
         <tag>JLU</tag>
         <tag>常用网站</tag>
         <tag>网站导航</tag>
         <tag>吉林大学</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>工具网站推荐</title>
+    <url>/Posts/%E5%B7%A5%E5%85%B7%E7%BD%91%E7%AB%99%E6%8E%A8%E8%8D%90/</url>
+    <content><![CDATA[<p>这里整理一些平时比较实用的在线工具网站。尽量以<strong>无需安装、打开即用、功能明确</strong>为主，后续发现好用的网站会继续补充。</p>
+<blockquote>
+<p>部分在线工具需要把文件上传到第三方服务器。涉及身份证、合同、证书、未公开资料等敏感文件时，建议优先使用本地软件处理。</p>
+</blockquote>
+<span id="more"></span>
+
+<h2 id="图片编辑工具"><a href="#图片编辑工具" class="headerlink" title="图片编辑工具"></a>图片编辑工具</h2><h3 id="Photopea"><a href="#Photopea" class="headerlink" title="Photopea"></a>Photopea</h3><p><strong>网站：</strong> <a href="https://www.photopea.com/">https://www.photopea.com/</a></p>
+<p>在线图片编辑器，界面和操作逻辑与 Photoshop 比较接近，适合临时处理 PSD、PNG、JPG、WebP 等图片。</p>
+<p><strong>常用功能：</strong></p>
+<ul>
+<li>打开和编辑 PSD 文件</li>
+<li>图层、蒙版、选区、文字、滤镜</li>
+<li>图片裁剪、缩放和简单修图</li>
+<li>导出 PNG、JPG、WebP、SVG 等格式</li>
+<li>不想为了临时改一张图而安装大型软件时非常方便</li>
+</ul>
+<p><strong>适合：</strong> PSD 临时修改、网页素材处理、截图编辑、简单设计。</p>
+<hr>
+<h3 id="Squoosh"><a href="#Squoosh" class="headerlink" title="Squoosh"></a>Squoosh</h3><p><strong>网站：</strong> <a href="https://squoosh.app/">https://squoosh.app/</a></p>
+<p>非常适合做网页图片压缩和格式转换，可以直接对比压缩前后的画质与文件大小。</p>
+<p><strong>常用功能：</strong></p>
+<ul>
+<li>JPG、PNG、WebP、AVIF 等格式转换</li>
+<li>调整压缩质量</li>
+<li>修改图片尺寸</li>
+<li>实时对比压缩效果</li>
+</ul>
+<p><strong>适合：</strong> 博客图片、网页资源、封面图压缩。</p>
+<hr>
+<h3 id="TinyPNG"><a href="#TinyPNG" class="headerlink" title="TinyPNG"></a>TinyPNG</h3><p><strong>网站：</strong> <a href="https://tinypng.com/">https://tinypng.com/</a></p>
+<p>操作很简单的图片压缩工具，拖入图片即可压缩。</p>
+<p><strong>适合：</strong> 快速减小 PNG、JPG、WebP 等图片的体积。</p>
+<hr>
+<h3 id="remove-bg"><a href="#remove-bg" class="headerlink" title="remove.bg"></a>remove.bg</h3><p><strong>网站：</strong> <a href="https://www.remove.bg/">https://www.remove.bg/</a></p>
+<p>用于自动去除图片背景，适合人物、商品等主体比较明确的图片。</p>
+<p><strong>适合：</strong> 头像抠图、商品图、演示文稿素材制作。</p>
+<hr>
+<h3 id="SVGOMG"><a href="#SVGOMG" class="headerlink" title="SVGOMG"></a>SVGOMG</h3><p><strong>网站：</strong> <a href="https://jakearchibald.github.io/svgomg/">https://jakearchibald.github.io/svgomg/</a></p>
+<p>用于压缩和优化 SVG 文件，可以删除 SVG 中大量冗余信息。</p>
+<p><strong>适合：</strong> 网站图标、Logo、矢量资源优化。</p>
+<h2 id="PDF-工具"><a href="#PDF-工具" class="headerlink" title="PDF 工具"></a>PDF 工具</h2><h3 id="PDF24-Tools"><a href="#PDF24-Tools" class="headerlink" title="PDF24 Tools"></a>PDF24 Tools</h3><p><strong>网站：</strong> <a href="https://tools.pdf24.org/">https://tools.pdf24.org/</a></p>
+<p>提供较完整的 PDF 在线处理功能。</p>
+<p><strong>常用功能：</strong></p>
+<ul>
+<li>PDF 合并与拆分</li>
+<li>PDF 压缩</li>
+<li>图片转 PDF</li>
+<li>PDF 转图片</li>
+<li>页面旋转、删除和排序</li>
+<li>添加水印</li>
+</ul>
+<p><strong>适合：</strong> 日常学习资料和普通文档处理。</p>
+<hr>
+<h3 id="iLovePDF"><a href="#iLovePDF" class="headerlink" title="iLovePDF"></a>iLovePDF</h3><p><strong>网站：</strong> <a href="https://www.ilovepdf.com/">https://www.ilovepdf.com/</a></p>
+<p>也是比较常见的一站式 PDF 工具网站，界面简单，适合快速处理 PDF。</p>
+<p><strong>适合：</strong> 合并、拆分、压缩、转换等常见操作。</p>
+<h2 id="文件格式转换"><a href="#文件格式转换" class="headerlink" title="文件格式转换"></a>文件格式转换</h2><h3 id="CloudConvert"><a href="#CloudConvert" class="headerlink" title="CloudConvert"></a>CloudConvert</h3><p><strong>网站：</strong> <a href="https://cloudconvert.com/">https://cloudconvert.com/</a></p>
+<p>支持多种文件格式之间的转换，适合处理一些本地软件不方便直接转换的格式。</p>
+<p><strong>适合：</strong> 图片、音频、视频、文档等格式转换。</p>
+<hr>
+<h3 id="Convertio"><a href="#Convertio" class="headerlink" title="Convertio"></a>Convertio</h3><p><strong>网站：</strong> <a href="https://convertio.co/">https://convertio.co/</a></p>
+<p>在线文件格式转换工具，支持的格式类型比较丰富。</p>
+<p><strong>适合：</strong> 临时进行跨格式转换。</p>
+<h2 id="开发与文本工具"><a href="#开发与文本工具" class="headerlink" title="开发与文本工具"></a>开发与文本工具</h2><h3 id="regex101"><a href="#regex101" class="headerlink" title="regex101"></a>regex101</h3><p><strong>网站：</strong> <a href="https://regex101.com/">https://regex101.com/</a></p>
+<p>正则表达式测试和调试工具，可以实时查看匹配结果，并解释表达式的各个部分。</p>
+<p><strong>适合：</strong> 编写和调试正则表达式。</p>
+<hr>
+<h3 id="CyberChef"><a href="#CyberChef" class="headerlink" title="CyberChef"></a>CyberChef</h3><p><strong>网站：</strong> <a href="https://gchq.github.io/CyberChef/">https://gchq.github.io/CyberChef/</a></p>
+<p>功能非常丰富的浏览器端数据处理工具，可以通过组合操作完成编码、解码、哈希、文本转换等任务。</p>
+<p><strong>适合：</strong></p>
+<ul>
+<li>Base64 编码&#x2F;解码</li>
+<li>URL 编码&#x2F;解码</li>
+<li>哈希计算</li>
+<li>十六进制与文本转换</li>
+<li>JSON、字符串及各种数据处理</li>
+</ul>
+<hr>
+<h3 id="JSON-Formatter-Validator"><a href="#JSON-Formatter-Validator" class="headerlink" title="JSON Formatter &amp; Validator"></a>JSON Formatter &amp; Validator</h3><p><strong>网站：</strong> <a href="https://jsonformatter.curiousconcept.com/">https://jsonformatter.curiousconcept.com/</a></p>
+<p>用于格式化和检查 JSON 内容，在排查接口返回内容或配置文件格式问题时比较方便。</p>
+<h2 id="网络与查询工具"><a href="#网络与查询工具" class="headerlink" title="网络与查询工具"></a>网络与查询工具</h2><h3 id="Speedtest"><a href="#Speedtest" class="headerlink" title="Speedtest"></a>Speedtest</h3><p><strong>网站：</strong> <a href="https://www.speedtest.net/">https://www.speedtest.net/</a></p>
+<p>用于测试网络下载速度、上传速度和延迟。</p>
+<hr>
+<h3 id="IPinfo"><a href="#IPinfo" class="headerlink" title="IPinfo"></a>IPinfo</h3><p><strong>网站：</strong> <a href="https://ipinfo.io/">https://ipinfo.io/</a></p>
+<p>用于查询当前公网 IP 以及网络运营商、ASN 等基本网络信息。</p>
+<h2 id="使用建议"><a href="#使用建议" class="headerlink" title="使用建议"></a>使用建议</h2><p>不同在线工具的实现方式不同，大致可以分为两类：</p>
+<ol>
+<li><strong>浏览器本地处理</strong>：文件主要在浏览器中完成处理，通常更适合隐私敏感一些的内容。</li>
+<li><strong>上传服务器处理</strong>：文件需要先上传到网站服务器，再返回处理结果。</li>
+</ol>
+<p>对于普通图片、公开资料，在线工具非常方便；但涉及账号密码等敏感信息时，建议尽量使用可信的本地工具。</p>
+]]></content>
+      <categories>
+        <category>资源分享</category>
+      </categories>
+      <tags>
+        <tag>工具网站</tag>
+        <tag>在线工具</tag>
       </tags>
   </entry>
 </search>
